@@ -10,7 +10,7 @@ export function getCarousel() {
       g_tk: 5381,
       uin: 0,
       platform: 'h5',
-      needNewCode: 1
+      needNewCode: 1,
     },
     OPTION
   )
@@ -33,3 +33,20 @@ export function getNewAlbum() {
     }
   )
 }
+export function getAlbuminfo(mid) {
+  return jsonp(
+    URL.albumInfo,
+    {
+      ...PARAM,
+      albummid: mid,
+      g_tk: 5381,
+      loginUin: 0,
+      hostUin: 0,
+      platform: 'yqq.json',
+      needNewCode: 0
+    },
+    OPTION
+  )
+}
+// ?jsonpCallback=callback1
+// ?callback=callback1
